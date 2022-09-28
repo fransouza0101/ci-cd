@@ -1,33 +1,41 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+nome: CI-CD 
 
-name: Node.js CI
+em:
+  empurrar:
+    ramos: [ principal ]
 
-on:
-  push:
-    branches: [ "dev-b" ]
-  pull_request:
-    branches: [ "dev-b" ]
+empregos:
+        
+  construir:
+    nome: Construir 
+    em funcionamento: ubuntu-mais recente
+    passos:
+        - executado: echo CONSTRUINDO O SOFTWARE NO AMBIENTE DE DEV
+      
+  implantação-dev:
+    nome: Teste em DEV
+    necessidades: [construir]
+    em funcionamento: ubuntu-mais recente
+    passos:
+      - usos: ações/checkout@v2
+      - nome: Node de configuração.js
+        usos: ações/node@v1 de configuração
+        com:
+          versão de nó: "14"
 
-jobs:
-  build:
+      # Instalar deps necessários para ação - brincadeira, jest-html-report
+      - nome: Instalar dependências
+        executar: npm instalar --save-dev brincadeira jest-html-reporter 
 
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm install --save-dev jest  
-    - run: npm install --save-dev jest-html-reporter
-    - run: npm run build --if-present
-    - run: npm test
+      # Finalmente, execute nossos testes
+      - nome: Executar os testes
+        execução: teste npm
+        
+      - nome: Gerar relatório
+        execução: teste npm
+      - nome: Relatório de upload
+        usos: ações/upload-artifact@v2
+        com:
+          nome: jest-report
+          caminho: './relatório de teste.html'
+      - executado: echo REALIZANDO TESTES UNITARIOS
