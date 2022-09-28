@@ -5,7 +5,7 @@ name: Trabalho com jest
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev-b" ]
 
 jobs:
   build:
