@@ -1,7 +1,7 @@
 {
   "name": "deva",
   "version": "1.0.0",
-  "description": "",
+  "description": "Estudo inicial de Jest - turma 0222",
   "main": "index.js",
   "scripts": {
     "test": "jest"
