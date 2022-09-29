@@ -1,12 +1,25 @@
 {
-  "name": "deva",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "nome": "estudo-brincadeira",
+  "versão": "1.0.0",
+  "descrição": "Estudo inicial de Jest - turma 0222",
+  "principal": "índice.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "teste": "brincadeira"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "palavras-chave": [
+    "brincadeira"
+  ],
+  "autor": "CEO",
+  "licença": "ISC",
+  "descondependências": {
+    "brincadeira": "^28.1.2","
+    "jest-html-reporter": "^3.5.0"
+  },
+  "brincadeira": { 
+    "Repórteres": 
+    [ "padrão",
+    [ "./node_modules/jest-html-reporter", { "pageTitle": "Relatório de teste" }]
+                ]
+          } 
+  
 }
