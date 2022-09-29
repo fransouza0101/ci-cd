@@ -12,7 +12,7 @@
   "author": "CEO",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^28.1.2",
+    "jest": "^29.20.0",
     "jest-html-reporter": "^3.5.0"
   },
   "jest": { 
