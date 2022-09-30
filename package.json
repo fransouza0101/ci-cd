@@ -1,0 +1,37 @@
+{
+  "name": "projetozero",
+  "version": "1.0.0",
+  "description": "atividade do ci-cd",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fransouza0101/ci-cd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fransouza0101/ci-cd/issues"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report"
+        }
+      ]
+    ]
+  },
+  "homepage": "https://github.com/fransouza0101/ci-cd#readme",
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "jest-html-reporter": "^3.7.0"
+  }
+}
