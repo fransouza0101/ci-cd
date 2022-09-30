@@ -1,17 +1,26 @@
 {
-  "name": "deva",
+  "name": "projetozero",
   "version": "1.0.0",
-  "description": "",
+  "description": "Estudo inicial do teste unitario - turma 0222",
   "main": "index.js",
+
   "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
+    "test": "jest",
+  
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/fransouza0101/ci-cd.git"
+    },
   "author": "",
   "license": "ISC",
+
   "devDependencies": {
     "jest": "^29.1.2",
     "jest-html-reporter": "^3.7.0"
+
+  "bugs": {
+    "url": "https://github.com/fransouza0101/ci-cd/issues"
+
   },
   "jest": {
     "reporters": [
@@ -23,5 +32,12 @@
         }
       ]
     ]
-  }
-}
+
+
+  },
+  "homepage": "https://github.com/fransouza0101/ci-cd#readme",
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "jest-html-reporter": "^3.7.0"
+
+  }}
